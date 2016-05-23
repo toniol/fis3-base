@@ -1,1 +1,15 @@
+.DS_Store
 components/*
+/node_modules/
+npm-debug.log
+*.swp
+.sw*
+.idea/*
+.editorconfig
+.jshintrc
+.travis.yml
+/.sass-cache/
+.project
+/.grunt/
+temp/
+README.html
