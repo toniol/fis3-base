@@ -48,7 +48,7 @@ fis.match(/^\/modules\/(.*\.scss)$/i, {
     rExt: '.css',
     isMod: true,
     release: '${project.static}/$1',
-    parser: fis.plugin('sass', {
+    parser: fis.plugin('node-sass', {
         include_paths: ['modules/css', 'components'] // 加入文件查找目录
     }),
     postprocessor: fis.plugin('autoprefixer', {
