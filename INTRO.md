@@ -6,14 +6,14 @@ fis依赖node，了解node请看这里[nodejs.org](http://nodejs.org/)。
 
 第一步，用下面的命令安装fis3
 
-	npm install -g fis3
+    npm install -g fis3
 
 第二步，安装fis插件
 
     npm install -g fis3-hook-commonjs
 
     npm install -g fis3-parser-node-sass
-    npm install -g fis-parser-template
+    npm install -g fis-parser-handlebars-3.x
     npm install -g fis-parser-babel-5.x
 
     npm install -g fis-postprocessor-autoprefixer
@@ -32,13 +32,13 @@ fis依赖node，了解node请看这里[nodejs.org](http://nodejs.org/)。
 ## 如何运行
 开启fis服务器
 
-	fis3 server start
+    fis3 server start
 
 发布
 
-	fis3 release
-	fis3 release prd-debug # 本地查看发布产品库状态
-	fis3 release prd # 发布产品库
+    fis3 release
+    fis3 release prd-debug # 本地查看发布产品库状态
+    fis3 release prd # 发布产品库
 
 更多命令请[查看这里](http://fis.baidu.com/fis3/docs/api/command.html)。
 
@@ -62,11 +62,11 @@ fis依赖node，了解node请看这里[nodejs.org](http://nodejs.org/)。
 - img html中用到的图片
 - lib 存放一些不打包的js库
 - modules 项目的组件
-	- app 项目用到的js
-	- css 项目用到的css
-	- lib 第三方js
-	- ui UI 组件
-	- util 工具组件
+    - app 项目用到的js
+    - css 项目用到的css
+    - lib 第三方js
+    - ui UI 组件
+    - util 工具组件
 - test 模拟测试数据
 
 ## fis components

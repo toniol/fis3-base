@@ -81,17 +81,25 @@ fis.match(/^\/modules\/(.*\.js)$/i, {
 });
 
 
-// ------ 配置前端模版 使用template.js
-fis.match('**.tmpl', {
-    parser: fis.plugin('template', {
-        sTag: '<#',
-        eTag: '#>',
-        global: 'template'
-    }),
-    isJsLike: true,
-    release : false
-});
+// ------ 配置前端模版 使用 template.js
+// fis.match('**.tmpl', {
+//     parser: fis.plugin('template', {
+//         sTag: '{{',
+//         eTag: '}}',
+//         global: 'template'
+//     }),
+//     isJsLike: true,
+//     release : false
+// });
 
+// ------ 配置前端模版 使用 handlebars.js
+fis.match('**.handlebars', {
+    rExt: '.js', // from .handlebars to .js 虽然源文件不需要编译，但是还是要转换为 .js 后缀
+    parser: fis.plugin('handlebars-3.x', {
+        //fis-parser-handlebars-3.x option
+    }),
+    release: false // handlebars 源文件不需要编译
+});
 
 // ------ 配置模拟数据
 fis.match('/test/**', {
